@@ -20,4 +20,9 @@ public class LibraryTest {
         boolean added = library.addBook(book);
         assertTrue("El libro se agrego correctamente", added);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAddBookShouldThrowExceptionWhenNull() {
+        library.addBook(null);
+    }
 }
