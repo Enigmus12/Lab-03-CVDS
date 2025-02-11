@@ -34,9 +34,17 @@ public class Library {
      *
      * @return true if the book was stored false otherwise.
      */
-    public boolean addBook(Book book) {
-        //TODO Implement the logic to add a new book into the map.
-        return false;
+    public boolean addBook(Book book)  throws IllegalArgumentException {
+        if (book == null) {
+            throw new IllegalArgumentException("El libro no puede ser nulo");
+        }
+
+        if (books.containsKey(book)){
+            books.put(book, books.get(book) + 1);
+        }else {
+            books.put(book, 1);
+        }
+        return true;
     }
 
     /**
