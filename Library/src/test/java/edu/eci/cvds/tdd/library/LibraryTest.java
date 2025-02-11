@@ -35,5 +35,13 @@ public class LibraryTest {
         Loan loan = library.loanABook("user123", "isbnNotExists");
         assertNotNull("El préstamo no debería ser nulo si el libro está disponible", loan);
     }
+    @Test
+    public void testLoanBookFailIfUserNotExists() {
+        Book book = new Book("Title 1", "Author 1", "isbn1");
+        library.addBook(book); 
+
+        Loan loan = library.loanABook("nonExistentUser", "isbn1");
+        assertNotNull("El préstamo no debería ser nulo si el usuario existe", loan);
+    }
 
 }
