@@ -7,6 +7,8 @@ import edu.eci.cvds.tdd.library.user.User;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
@@ -31,17 +33,54 @@ public class LibraryTest {
     }
 
     @Test
-    public void testLoanBookFailIfBookNotAvailable() {
-        Loan loan = library.loanABook("user123", "isbnNotExists");
-        assertNotNull("El préstamo no debería ser nulo si el libro está disponible", loan);
+    public void testLoanBookCorrectly() {
+        Book book = new Book("Tittle 1", "Author 1", "isbn1");
+        library.addBook(book);
+        User user = new User("user1","id1");
+        library.addUser(user);
+        Loan loan = library.loanABook("id1", "isbn1");
+        assertNotNull("El préstamo se realizo porque esta el libro", loan);
     }
-    @Test
-    public void testLoanBookFailIfUserNotExists() {
-        Book book = new Book("Title 1", "Author 1", "isbn1");
-        library.addBook(book); 
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLoanBookFailIfBookNotExists() {
+        User user = new User("user1","id1");
+        library.addUser(user);
 
         Loan loan = library.loanABook("nonExistentUser", "isbn1");
-        assertNotNull("El préstamo no debería ser nulo si el usuario existe", loan);
+        assertNull("El préstamo es nulo porque no hay libros", loan);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testLoanBookFailIfUserNotExists() {
+        User user = new User("user1","id1");
+        library.addUser(user);
+
+        Loan loan = library.loanABook("nonExistentUser", "isbn1");
+        assertNull("El préstamo es nulo porque no hay libros", loan);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testLoanBookNoAmount() {
+        Book book = new Book("Tittle 1", "Author 1", "isbn1");
+        library.addBook(book);
+        User user = new User("user1","id1");
+        User user2 = new User("user2","id2");
+        library.addUser(user);
+        library.addUser(user2);
+        Loan loan = library.loanABook("id1", "isbn1");
+        Loan loan2 = library.loanABook("id2", "isbn1");
+        assertNull("El préstamo no se realizo porque no hay libro", loan2);
+    }
+
+    @Test
+    public void testLoanBookButWasLoan() {
+        Book book = new Book("Tittle 1", "Author 1", "isbn1");
+        library.addBook(book);
+        User user = new User("user1","id1");
+        library.addUser(user);
+        Loan loan = library.loanABook("id1", "isbn1");
+        Loan loan2 = library.loanABook("id1", "isbn1");
+        assertNull("El préstamo no se realizo porque no hay libro", loan2);
+    }
 }
