@@ -62,7 +62,59 @@ public class Library {
      * @return The new created loan.
      */
     public Loan loanABook(String userId, String isbn) {
+
+        Book book = searchBookByIsbn(isbn);
+
+        if (book==null){
+            throw new IllegalArgumentException("El libro con ISBN " + isbn + " no existe.");
+        }
+        if(books.containsKey(book) && verifyUser(userId) && verifyLoans(userId,book) ){
+
+            if(books.get(book) > 0){
+                User user = searchUserById(userId);
+                Loan loan = new Loan(book,user);
+                loans.add(loan);
+                books.put(book, books.get(book) - 1);
+                return loan;
+            }else {
+                throw new IllegalArgumentException("No hay libros disponibles para prestar.");
+            }
+        }
         return null;
+    }
+    public User searchUserById(String userId){
+        for(User u : users){
+            if (u.getId().equals(userId)){
+                return u;
+            }
+        }
+        return null;
+    }
+    public Book searchBookByIsbn(String isbn) {
+        for (Book book : books.keySet()) {  
+            if (book.getIsbn().equals(isbn)) {
+                return book; 
+            }
+        }
+        return null; 
+    }
+
+    public boolean verifyUser(String userId) {
+        for (User u : users) {
+            if (u.getId().equals(userId)) {
+                return true; 
+            }
+        }        
+        return false;
+    }
+
+    public boolean verifyLoans(String userId, Book book){
+        for (Loan l: loans){
+            if (l.getUser().getId().equals(userId) && l.getBook().equals(book) && l.getStatus() == LoanStatus.ACTIVE){
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
