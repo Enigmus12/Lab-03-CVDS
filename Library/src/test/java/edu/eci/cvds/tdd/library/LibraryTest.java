@@ -1,5 +1,9 @@
 package edu.eci.cvds.tdd.library;
+
 import edu.eci.cvds.tdd.library.book.Book;
+import edu.eci.cvds.tdd.library.loan.Loan;
+import edu.eci.cvds.tdd.library.loan.LoanStatus;
+import edu.eci.cvds.tdd.library.user.User;  
 
 import org.junit.Before;
 import org.junit.Test;
@@ -25,4 +29,11 @@ public class LibraryTest {
     public void testAddBookShouldThrowExceptionWhenNull() {
         library.addBook(null);
     }
+
+    @Test
+    public void testLoanBookFailIfBookNotAvailable() {
+        Loan loan = library.loanABook("user123", "isbnNotExists");
+        assertNotNull("El préstamo no debería ser nulo si el libro está disponible", loan);
+    }
+
 }
