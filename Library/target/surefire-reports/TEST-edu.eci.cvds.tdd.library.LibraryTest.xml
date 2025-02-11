@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.eci.cvds.tdd.library.LibraryTest" time="0.021" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.eci.cvds.tdd.library.LibraryTest" time="0.045" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\Esteban Aguilera\Documents\Lab-03-CVDS\Library\target\test-classes;C:\Users\Esteban Aguilera\Documents\Lab-03-CVDS\Library\target\classes;C:\Users\Esteban Aguilera\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Esteban Aguilera\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="C:\Users\Juan\Desktop\CVDS\Lab-03-CVDS\Library\target\test-classes;C:\Users\Juan\Desktop\CVDS\Lab-03-CVDS\Library\target\classes;C:\Users\Juan\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Juan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,48 +15,48 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CO"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\Esteban Aguilera\AppData\Local\Temp\surefire4203890404156035062\surefirebooter-20250210193541114_3.jar C:\Users\Esteban Aguilera\AppData\Local\Temp\surefire4203890404156035062 2025-02-10T19-35-40_958-jvmRun1 surefire-20250210193541114_1tmp surefire_0-20250210193541114_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Juan\AppData\Local\Temp\surefire17741699097442798366\surefirebooter-20250210205358720_3.jar C:\Users\Juan\AppData\Local\Temp\surefire17741699097442798366 2025-02-10T20-53-58_421-jvmRun1 surefire-20250210205358720_1tmp surefire_0-20250210205358720_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\Esteban Aguilera\Documents\Lab-03-CVDS\Library\target\test-classes;C:\Users\Esteban Aguilera\Documents\Lab-03-CVDS\Library\target\classes;C:\Users\Esteban Aguilera\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Esteban Aguilera\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Juan\Desktop\CVDS\Lab-03-CVDS\Library\target\test-classes;C:\Users\Juan\Desktop\CVDS\Lab-03-CVDS\Library\target\classes;C:\Users\Juan\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Juan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\Esteban Aguilera"/>
+    <property name="user.home" value="C:\Users\Juan"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2024-07-16"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\Esteban Aguilera\Documents\Lab-03-CVDS\Library"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="basedir" value="C:\Users\Juan\Desktop\CVDS\Lab-03-CVDS\Library"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Esteban Aguilera\AppData\Local\Temp\surefire4203890404156035062\surefirebooter-20250210193541114_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Juan\AppData\Local\Temp\surefire17741699097442798366\surefirebooter-20250210205358720_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
-    <property name="user.name" value="Esteban Aguilera"/>
+    <property name="user.name" value="Juan"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\Esteban Aguilera\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\Juan\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="C:\Users\ESTEBA~1\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\Juan\AppData\Local\Temp\"/>
     <property name="java.version" value="17.0.12"/>
-    <property name="user.dir" value="C:\Users\Esteban Aguilera\Documents\Lab-03-CVDS\Library"/>
+    <property name="user.dir" value="C:\Users\Juan\Desktop\CVDS\Lab-03-CVDS\Library"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk-17\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Users\Esteban Aguilera\Downloads\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Users\Esteban Aguilera\AppData\Local\Programs\Python\Launcher\;C:\Users\Esteban Aguilera\AppData\Local\Microsoft\WindowsApps;C:\Users\Esteban Aguilera\AppData\Local\GitHubDesktop\bin;C:\Users\Esteban Aguilera\AppData\Local\Muse Hub\lib;C:\Users\Esteban Aguilera\AppData\Local\Programs\Microsoft VS Code\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python312\Scripts\;C:\Python312\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\HP\HP One Agent;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Maven\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Users\Juan\AppData\Local\Microsoft\WindowsApps;C:\Users\Juan\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Juan\AppData\Roaming\npm;;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="java.vm.version" value="17.0.12+8-LTS-286"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAddNewBook" classname="edu.eci.cvds.tdd.library.LibraryTest" time="0.006">
+  <testcase name="testAddNewBook" classname="edu.eci.cvds.tdd.library.LibraryTest" time="0.009">
     <failure message="El libro se agrego correctamente" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: El libro se agrego correctamente
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.assertTrue(Assert.java:42)
@@ -69,6 +69,32 @@
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="testAddBookShouldThrowExceptionWhenNull" classname="edu.eci.cvds.tdd.library.LibraryTest" time="0.0">
+    <failure message="Expected exception: java.lang.IllegalArgumentException" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:34)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
