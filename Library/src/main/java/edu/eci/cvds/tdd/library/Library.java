@@ -1,5 +1,6 @@
 package edu.eci.cvds.tdd.library;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -127,9 +128,18 @@ public class Library {
      * @return the loan with the RETURNED status.
      */
     public Loan returnLoan(Loan loan) {
-        return null;
-    }
+        if (loan == null || !loans.contains(loan) || loan.getStatus() != LoanStatus.ACTIVE) {
+            throw new IllegalArgumentException("El préstamo no es válido o ya fue devuelto.");
+        }
 
+        loan.setStatus(LoanStatus.RETURNED);
+        loan.setReturnDate(LocalDateTime.now());
+        Book book = loan.getBook();
+        if (book != null && books.containsKey(book)) {
+            books.put(book, books.get(book) + 1);
+        }
+        return loan;
+    }
 
     public boolean addUser(User user) {
         return users.add(user);
