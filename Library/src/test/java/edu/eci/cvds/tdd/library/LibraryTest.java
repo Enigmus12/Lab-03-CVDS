@@ -1,15 +1,16 @@
 package edu.eci.cvds.tdd.library;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.Test;
+
 import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.loan.Loan;
 import edu.eci.cvds.tdd.library.loan.LoanStatus;
-import edu.eci.cvds.tdd.library.user.User;  
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.experimental.theories.suppliers.TestedOn;
-
-import static org.junit.Assert.*;
+import edu.eci.cvds.tdd.library.user.User;
 
 public class LibraryTest {
 
@@ -83,4 +84,23 @@ public class LibraryTest {
         Loan loan2 = library.loanABook("id1", "isbn1");
         assertNull("El préstamo no se realizo porque no hay libro", loan2);
     }
+
+    @Test
+    public void testReturnLoanValid(){
+        Book book = new Book("Tittle 1", "Author 1", "isbn1");
+        library.addBook(book);
+        User user = new User("user1","id1");
+        library.addUser(user);
+        Loan loan = library.loanABook("id1", "isbn1");
+        assertEquals(library.returnLoan(loan).getStatus(),LoanStatus.RETURNED);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testReturnLoanNoPresentInLoansOfSystem(){
+        Book book = new Book("Tittle 1", "Author 1", "isbn1");
+        User user = new User("user1","id1");
+        Loan loan = new Loan(book,user);
+        assertEquals(library.returnLoan(loan).getStatus(),LoanStatus.RETURNED);
+    }
+
 }

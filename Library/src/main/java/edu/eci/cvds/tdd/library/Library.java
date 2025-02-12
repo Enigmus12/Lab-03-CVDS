@@ -1,14 +1,14 @@
 package edu.eci.cvds.tdd.library;
 
-import edu.eci.cvds.tdd.library.book.Book;
-import edu.eci.cvds.tdd.library.loan.Loan;
-import edu.eci.cvds.tdd.library.user.User;
-import edu.eci.cvds.tdd.library.loan.LoanStatus;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import edu.eci.cvds.tdd.library.book.Book;
+import edu.eci.cvds.tdd.library.loan.Loan;
+import edu.eci.cvds.tdd.library.loan.LoanStatus;
+import edu.eci.cvds.tdd.library.user.User;
 
 /**
  * Library responsible for manage the loans and the users.
@@ -127,9 +127,9 @@ public class Library {
      * @return the loan with the RETURNED status.
      */
     public Loan returnLoan(Loan loan) {
-        //TODO Implement the login of loan a book to a user based on the UserId and the isbn.
         return null;
     }
+
 
     public boolean addUser(User user) {
         return users.add(user);
