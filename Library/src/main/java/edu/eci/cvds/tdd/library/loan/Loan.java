@@ -1,9 +1,9 @@
 package edu.eci.cvds.tdd.library.loan;
 
+import java.time.LocalDateTime;
+
 import edu.eci.cvds.tdd.library.book.Book;
 import edu.eci.cvds.tdd.library.user.User;
-
-import java.time.LocalDateTime;
 
 public class Loan {
     private Book book;
@@ -23,9 +23,6 @@ public class Loan {
         return book;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
-    }
 
     public User getUser() {
         return user;
@@ -39,9 +36,6 @@ public class Loan {
         return loanDate;
     }
 
-    public void setLoanDate(LocalDateTime loanDate) {
-        this.loanDate = loanDate;
-    }
 
     public LoanStatus getStatus() {
         return status;
@@ -51,9 +45,6 @@ public class Loan {
         this.status = status;
     }
 
-    public LocalDateTime getReturnDate() {
-        return returnDate;
-    }
 
     public void setReturnDate(LocalDateTime returnDate) {
         this.returnDate = returnDate;
