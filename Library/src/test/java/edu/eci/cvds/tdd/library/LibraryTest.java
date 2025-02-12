@@ -103,4 +103,21 @@ public class LibraryTest {
         assertEquals(library.returnLoan(loan).getStatus(),LoanStatus.RETURNED);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testReturnLoanNull(){
+        assertEquals(library.returnLoan(null).getStatus(),LoanStatus.RETURNED);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testReturnLoanAlreadyReturned(){
+        Book book = new Book("Tittle 1", "Author 1", "isbn1");
+        library.addBook(book);
+        User user = new User("user1","id1");
+        library.addUser(user);
+        Loan loan = library.loanABook("id1", "isbn1");
+        library.returnLoan(loan);
+        assertEquals(library.returnLoan(loan).getStatus(),LoanStatus.RETURNED);
+    }
+
+
 }
