@@ -43,7 +43,7 @@ public class Library {
 
 <span class="pc bpc" id="L44" title="1 of 2 branches missed.">        if (books.containsKey(book)){</span>
 <span class="nc" id="L45">            books.put(book, books.get(book) + 1);</span>
-<span class="nc" id="L46">        }else {</span>
+        }else {
 <span class="fc" id="L47">            books.put(book, 1);</span>
         }
 <span class="fc" id="L49">        return true;</span>
@@ -88,7 +88,7 @@ public class Library {
 <span class="pc bpc" id="L88" title="1 of 2 branches missed.">            if (u.getId().equals(userId)){</span>
 <span class="fc" id="L89">                return u;</span>
             }
-        }
+<span class="nc" id="L91">        }</span>
 <span class="nc" id="L92">        return null;</span>
     }
     public Book searchBookByIsbn(String isbn) {
@@ -96,7 +96,7 @@ public class Library {
 <span class="pc bpc" id="L96" title="1 of 2 branches missed.">            if (book.getIsbn().equals(isbn)) {</span>
 <span class="fc" id="L97">                return book; </span>
             }
-        }
+<span class="nc" id="L99">        }</span>
 <span class="fc" id="L100">        return null; </span>
     }
 
@@ -105,7 +105,7 @@ public class Library {
 <span class="fc bfc" id="L105" title="All 2 branches covered.">            if (u.getId().equals(userId)) {</span>
 <span class="fc" id="L106">                return true; </span>
             }
-        }        
+<span class="fc" id="L108">        }        </span>
 <span class="nc" id="L109">        return false;</span>
     }
 
@@ -114,7 +114,7 @@ public class Library {
 <span class="pc bpc" id="L114" title="2 of 6 branches missed.">            if (l.getUser().getId().equals(userId) &amp;&amp; l.getBook().equals(book) &amp;&amp; l.getStatus() == LoanStatus.ACTIVE){</span>
 <span class="fc" id="L115">                return false;</span>
             }
-        }
+<span class="fc" id="L117">        }</span>
 <span class="fc" id="L118">        return true;</span>
     }
 

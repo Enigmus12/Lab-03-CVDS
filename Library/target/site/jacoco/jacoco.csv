@@ -1,7 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-maven-archetype-quickstart,edu.eci.cvds.tdd.library,Library,19,261,11,33,4,45,11,20,0,9
+maven-archetype-quickstart,edu.eci.cvds.tdd.library,Library,21,260,11,33,5,47,11,20,0,9
 maven-archetype-quickstart,edu.eci.cvds.tdd.library.book,Book,0,22,0,0,0,7,0,3,0,3
-maven-archetype-quickstart,edu.eci.cvds.tdd,App,7,0,0,0,3,0,2,0,2,0
 maven-archetype-quickstart,edu.eci.cvds.tdd.library.loan,LoanStatus,0,15,0,0,0,2,0,1,0,1
 maven-archetype-quickstart,edu.eci.cvds.tdd.library.loan,Loan,7,35,0,0,3,14,2,6,2,6
 maven-archetype-quickstart,edu.eci.cvds.tdd.library.user,User,0,12,0,0,0,5,0,2,0,2
