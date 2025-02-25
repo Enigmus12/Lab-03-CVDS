@@ -20,6 +20,9 @@ public class Library {
     private final Map<Book, Integer> books;
     private final List<Loan> loans;
 
+    /**
+     * Initializes a new Library instance with empty collections.
+     */
     public Library() {
         users = new ArrayList<>();
         books = new HashMap<>();
@@ -83,6 +86,13 @@ public class Library {
         }
         return null;
     }
+
+    /**
+     * Searches for a user by their ID.
+     *
+     * @param userId The user ID.
+     * @return The User object, or null if not found.
+     */
     public User searchUserById(String userId){
         for(User u : users){
             if (u.getId().equals(userId)){
@@ -91,6 +101,13 @@ public class Library {
         }
         return null;
     }
+
+    /**
+     * Searches for a book by its ISBN.
+     *
+     * @param isbn The ISBN of the book.
+     * @return The Book object, or null if not found.
+     */
     public Book searchBookByIsbn(String isbn) {
         for (Book book : books.keySet()) {  
             if (book.getIsbn().equals(isbn)) {
@@ -100,6 +117,12 @@ public class Library {
         return null; 
     }
 
+    /**
+     * Verifies if a user exists.
+     *
+     * @param userId The user ID.
+     * @return true if the user exists, false otherwise.
+     */
     public boolean verifyUser(String userId) {
         for (User u : users) {
             if (u.getId().equals(userId)) {
@@ -109,6 +132,13 @@ public class Library {
         return false;
     }
 
+    /**
+     * Verifies if a user has an active loan for a specific book.
+     *
+     * @param userId The user ID.
+     * @param book The book to check.
+     * @return true if the user does not have an active loan for the book, false otherwise.
+     */
     public boolean verifyLoans(String userId, Book book){
         for (Loan l: loans){
             if (l.getUser().getId().equals(userId) && l.getBook().equals(book) && l.getStatus() == LoanStatus.ACTIVE){
@@ -141,6 +171,12 @@ public class Library {
         return loan;
     }
 
+    /**
+     * Adds a new user to the library system.
+     *
+     * @param user The user to add.
+     * @return true if the user was successfully added.
+     */
     public boolean addUser(User user) {
         return users.add(user);
     }
